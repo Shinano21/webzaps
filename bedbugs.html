@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ZAPS Solutions Bed Bug Control — Targeted detection and elimination of bed bugs using proven heat treatment, chemical treatment, and monitoring methods.">
+<title>Bed Bug Control – ZAPS Solutions Inc.</title>
+<link rel="icon" href="images/zaps_logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/nav.css">
+<style>
+:root{
+  --white:#ffffff;--off-white:#f8f7f4;--ink:#0d1117;--ink-2:#1c2530;--ink-muted:#4a5568;
+  --accent:#003D7D;--accent-2:#002d60;--accent-light:#0071BE;--blue-deep:#0f2d52;--blue-mid:#1e4a82;
+  --surface:#f0f4f0;--border:#e2e8e2;--nav-h:92px;
+  --r-sm:8px;--r-md:14px;--r-lg:22px;--r-xl:32px;--max-w:1220px;--ease:cubic-bezier(0.16,1,0.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px);-webkit-text-size-adjust:100%}
+body{font-family:'Poppins',sans-serif;background:var(--off-white);color:var(--ink);overflow-x:hidden;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+#progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--accent-light),var(--accent));z-index:2000;transition:width 0.1s linear}
+.hero{position:relative;min-height:calc(100vh - var(--nav-h));display:flex;align-items:center;justify-content:center;padding:clamp(40px,7vw,80px) clamp(16px,4vw,48px);text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('images/bedbugs.jpg');background-size:cover;background-position:center;transform:scale(1.05);transition:transform 12s ease}
+.hero-bg.loaded{transform:scale(1)}
+.hero-overlay{position:absolute;inset:0;background:rgba(255,255,255,0.55)}
+.hero-content{position:relative;z-index:2;max-width:760px;margin:0 auto}
+.hero-brand{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:28px}
+.hero-brand img{height:100px;width:auto}
+.hero-eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#0d2a5e;margin-bottom:14px}
+.hero-title{font-family:'Poppins',sans-serif;font-size:clamp(2.4rem,6vw,4.5rem);font-weight:800;line-height:1.05;letter-spacing:-2px;color:#0d2a5e;margin:12px 0 22px}
+.hero-sub{font-size:clamp(0.95rem,2vw,1.1rem);color:#4a5568;line-height:1.75;margin-bottom:38px;max-width:580px;margin-left:0;margin-right:0}
+.hero-btn{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:var(--white);padding:15px 34px;border-radius:var(--r-md);font-family:'Poppins',sans-serif;font-size:0.9rem;font-weight:700;letter-spacing:0.5px;transition:background 0.25s,transform 0.2s,box-shadow 0.25s;box-shadow:0 6px 28px rgba(0,61,125,0.35)}
+.hero-btn:hover{background:var(--accent-2);transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,61,125,0.45)}
+.dyk-section{background:var(--white);padding:clamp(64px,8vw,100px) clamp(16px,4vw,48px)}
+.dyk-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr;gap:48px;align-items:start}
+@media(min-width:900px){.dyk-inner{grid-template-columns:1fr 1fr;gap:64px}}
+.dyk-img-wrap{overflow:hidden;border-radius:var(--r-lg);box-shadow:0 10px 40px rgba(0,0,0,0.12);max-height:360px}
+.dyk-img-wrap img{width:100%;height:360px;object-fit:cover;display:block}
+.dyk-text h2{font-family:'Poppins',sans-serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;color:var(--ink);margin-bottom:20px;letter-spacing:-0.5px}
+.dyk-text p{font-size:0.97rem;color:var(--ink-muted);line-height:1.8;margin-bottom:18px}
+.dyk-text p strong{font-weight:700;color:var(--ink)}
+.approach-section{background:var(--off-white);padding:clamp(64px,8vw,100px) clamp(16px,4vw,48px)}
+.approach-inner{max-width:var(--max-w);margin:0 auto}
+.approach-heading{text-align:left;margin-bottom:clamp(40px,5vw,60px)}
+.approach-heading h2{font-family:'Poppins',sans-serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:800;color:var(--ink);letter-spacing:-0.5px;line-height:1.25}
+.approach-heading h2 .hl{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.approach-grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:540px){.approach-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:700px){.approach-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.approach-grid{grid-template-columns:repeat(4,1fr)}}
+.approach-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:32px 24px 28px;text-align:center;transition:box-shadow 0.25s,transform 0.25s}
+.approach-card:hover{box-shadow:0 12px 40px rgba(0,0,0,0.10);transform:translateY(-4px)}
+.approach-card-img-wrap{width:150px;height:150px;border-radius:50%;overflow:hidden;margin:0 auto 20px;border:3px solid var(--border)}
+.approach-card-img-wrap img{width:100%;height:100%;object-fit:cover}
+.approach-card h3{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:10px}
+.approach-card p{font-size:0.84rem;color:var(--ink-muted);line-height:1.65}
+.cta-band{position:relative;overflow:hidden;padding:clamp(60px,7vw,90px) clamp(16px,4vw,48px);text-align:center}
+.cta-band-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0d2a5e 0%,#1a4a96 50%,#0d2a5e 100%)}
+.cta-band-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(100,180,255,0.12) 0%,transparent 65%)}
+.cta-band-content{position:relative;z-index:2;max-width:640px;margin:0 auto}
+.cta-band-content h2{font-family:'Poppins',sans-serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:var(--white);letter-spacing:-0.5px;margin-bottom:16px}
+.cta-band-content p{font-size:0.97rem;color:rgba(255,255,255,0.82);margin-bottom:32px;line-height:1.75}
+.cta-band-content p strong{font-weight:700;color:var(--white)}
+.btn-outline-white{display:inline-flex;align-items:center;gap:9px;background:transparent;color:var(--white);padding:14px 34px;border-radius:var(--r-md);border:2px solid var(--white);font-family:'Poppins',sans-serif;font-size:0.9rem;font-weight:700;transition:background 0.25s,color 0.25s,transform 0.2s}
+.btn-outline-white:hover{background:var(--white);color:var(--accent);transform:translateY(-2px)}
+#contact{background:var(--off-white);padding:clamp(72px,9vw,110px) clamp(16px,4vw,48px)}
+.contact-inner{max-width:var(--max-w);margin:0 auto}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:clamp(32px,5vw,60px);align-items:start}
+@media(min-width:900px){.contact-grid{grid-template-columns:1fr 1.3fr}}
+.contact-title{font-family:'Poppins',sans-serif;font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(--ink);margin-bottom:16px}
+.contact-title .hl{color:var(--accent)}
+.contact-lead{font-size:0.95rem;color:var(--ink-muted);line-height:1.75;margin-bottom:36px;max-width:440px}
+.info-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
+.info-icon{width:44px;height:44px;flex-shrink:0;background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.info-text strong{display:block;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:3px;font-weight:700}
+.info-text span{font-size:0.9rem;color:var(--ink-muted)}
+.pcap-badge{display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:16px 18px;margin-top:28px}
+.pcap-badge svg{color:var(--accent);flex-shrink:0}
+.pcap-badge-text strong{display:block;font-size:0.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+.pcap-badge-text span{font-size:0.83rem;color:var(--ink-muted)}
+.contact-form{background:var(--white);border:1px solid var(--border);border-radius:var(--r-xl);padding:clamp(24px,5vw,48px);box-shadow:0 8px 40px rgba(0,0,0,0.06)}
+.form-title{font-family:'Poppins',sans-serif;font-size:1.4rem;font-weight:800;color:var(--ink);margin-bottom:28px;letter-spacing:-0.5px}
+.eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.form-row{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}
+@media(min-width:540px){.form-row{grid-template-columns:1fr 1fr}}
+.form-group{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.form-group label{font-size:0.8rem;font-weight:600;letter-spacing:0.5px;color:var(--ink-muted);text-transform:uppercase}
+.form-group input,.form-group textarea,.form-group select{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 14px;color:var(--ink);font-family:'Poppins',sans-serif;font-size:0.95rem;outline:none;transition:border-color 0.2s,box-shadow 0.2s;min-height:48px;-webkit-appearance:none;appearance:none}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,61,125,0.1);background:var(--white)}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a5568' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;background-color:var(--surface);cursor:pointer}
+.form-group select option{background:var(--white);color:var(--ink)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--ink-muted);opacity:0.5}
+.submit-btn{width:100%;background:var(--accent);color:var(--white);border:none;padding:15px;border-radius:var(--r-md);font-family:'Poppins',sans-serif;font-size:0.9rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;transition:background 0.25s,transform 0.2s,box-shadow 0.25s;box-shadow:0 6px 24px rgba(0,61,125,0.3);display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px}
+.submit-btn:hover{background:var(--accent-2);transform:translateY(-1px);box-shadow:0 10px 32px rgba(0,61,125,0.38)}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.65s var(--ease),transform 0.65s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-32px);transition:opacity 0.65s var(--ease),transform 0.65s var(--ease)}
+.reveal-left.visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(32px);transition:opacity 0.65s var(--ease),transform 0.65s var(--ease)}
+.reveal-right.visible{opacity:1;transform:none}
+.delay-1{transition-delay:0.12s}.delay-2{transition-delay:0.22s}.delay-3{transition-delay:0.32s}.delay-4{transition-delay:0.42s}
+footer{background:linear-gradient(160deg,#111827 0%,#0d1117 100%);padding:clamp(40px,6vw,64px) clamp(16px,4vw,48px) 24px}
+.footer-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr;gap:40px;text-align:left}
+@media(min-width:640px){.footer-inner{grid-template-columns:1.5fr 1fr 1fr;text-align:left}}
+.footer-logo{height:100px;width:auto;filter:brightness(0) invert(1);margin-bottom:14px;display:block;margin-left:0;margin-right:0}
+@media(min-width:640px){.footer-logo{margin-left:0;margin-right:0}}
+.footer-tagline{font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.6;max-width:280px;margin:0}
+@media(min-width:640px){.footer-tagline{margin:0}}
+.footer-socials{display:flex;gap:8px;margin-top:16px;justify-content:flex-start}
+@media(min-width:640px){.footer-socials{justify-content:flex-start}}
+.footer-social-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);transition:background 0.2s,color 0.2s}
+.footer-social-btn:hover{background:rgba(255,255,255,0.16);color:#fff}
+.footer-col-title{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px;align-items:center}
+@media(min-width:640px){.footer-links{align-items:flex-start}}
+.footer-links a{font-size:0.85rem;color:rgba(255,255,255,0.6);transition:color 0.2s}
+.footer-links a:hover{color:var(--white)}
+.footer-bottom{max-width:var(--max-w);margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.10);display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.footer-copy{font-size:0.78rem;color:rgba(255,255,255,0.4)}
+.footer-pcap{display:flex;align-items:center;gap:6px;font-size:0.7rem;color:rgba(255,255,255,0.4);font-weight:600;letter-spacing:1px}
+.footer-pcap svg{color:#7dc4f8}
+</style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<div id="nav-placeholder"></div>
+
+<section id="hero" class="hero" aria-label="Bed Bug Control">
+  <div class="hero-bg" id="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-brand"><img src="images/zaps_logo.png" alt="ZAPS Solutions Inc." loading="eager"></div>
+    <div class="hero-eyebrow">Integrated Pest Management</div>
+    <h1 class="hero-title">Bed Bug Control</h1>
+    <p class="hero-sub">Targeted detection and complete elimination of bed bugs — protecting your home, hotel, and business with proven treatments and lasting defense.</p>
+    <a href="#contact" class="hero-btn">Request a Zapper <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+
+<section class="dyk-section" aria-label="Did You Know">
+  <div class="dyk-inner">
+    <div class="dyk-img-wrap reveal-left"><img src="images/bedbugs.jpg" alt="Bed Bug Control" loading="lazy"></div>
+    <div class="dyk-text reveal-right">
+      <h2>Did You Know?</h2>
+      <p><strong>Bed bugs can survive for months without feeding and hide in the smallest cracks, seams, and furniture</strong> — making them one of the most difficult pests to eliminate without professional treatment.</p>
+      <p>A single female bed bug can lay up to 500 eggs in her lifetime. Without early detection and targeted treatment, a small infestation can spread rapidly throughout an entire property — affecting every room, mattress, and piece of furniture.</p>
+      <p><strong>ZAPS SOLUTIONS</strong> uses a combination of heat treatment, chemical application, and continuous monitoring to detect and eliminate bed bugs at every life stage — eggs, nymphs, and adults.</p>
+    </div>
+  </div>
+</section>
+
+<section class="approach-section" aria-label="Our Approach">
+  <div class="approach-inner">
+    <div class="approach-heading reveal"><h2><span class="hl">ZAPS SOLUTIONS</span> Effective Approach for Bed Bug Control</h2></div>
+    <div class="approach-grid">
+      <div class="approach-card reveal delay-1">
+        <div class="approach-card-img-wrap"><img src="images/Inspect.jpg" alt="Bed Bug Detection" loading="lazy"></div>
+        <h3>Bed Bug Detection</h3>
+        <p>Thorough assessment of mattresses, bed frames, furniture, wall joints, and hidden harborage areas to locate active bed bug infestations and measure the severity.</p>
+      </div>
+      <div class="approach-card reveal delay-2">
+        <div class="approach-card-img-wrap"><img src="images/misting01.jpg" alt="Chemical Treatment" loading="lazy"></div>
+        <h3>Chemical Treatment</h3>
+        <p>Application of approved residual insecticides and contact sprays to all identified harborage zones, cracks, and furniture surfaces to kill bed bugs on contact and prevent re-infestation.</p>
+      </div>
+      <div class="approach-card reveal delay-3">
+        <div class="approach-card-img-wrap"><img src="images/misting02.jpg" alt="Heat Treatment" loading="lazy"></div>
+        <h3>Heat Treatment</h3>
+        <p>Targeted heat application raises room temperatures to levels lethal to all bed bug life stages — including eggs — without chemicals, providing rapid and thorough elimination.</p>
+      </div>
+      <div class="approach-card reveal delay-4">
+        <div class="approach-card-img-wrap"><img src="images/longterm.jpg" alt="Monitoring and Follow-up" loading="lazy"></div>
+        <h3>Monitoring &amp; Follow-up</h3>
+        <p>Post-treatment monitoring using interceptors and follow-up visits to confirm complete elimination and prevent any resurgence before it can become a re-infestation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band" aria-label="Call to action">
+  <div class="cta-band-bg" aria-hidden="true"></div>
+  <div class="cta-band-overlay" aria-hidden="true"></div>
+  <div class="cta-band-content reveal">
+    <h2>Sleep Easy. We Handle the Bugs.</h2>
+    <p>Don't let bed bugs disrupt your home or business. <strong>ZAPS SOLUTIONS</strong> delivers fast, thorough, and certified bed bug elimination — backed by monitoring and follow-up to make sure they stay gone.</p>
+    <a href="#contact" class="btn-outline-white">Request a Zapper <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</div>
+
+<section id="contact" aria-label="Contact Us">
+  <div class="contact-inner">
+    <div class="contact-header reveal" style="text-align:center;margin-bottom:40px;">
+      <div class="eyebrow" style="justify-content:center;">Get In Touch</div>
+      <h2 class="contact-title">Let Our Zappers<br><span class="hl">Solve your Problems</span></h2>
+      <p class="contact-lead" style="max-width:none;margin:0 auto 0;">Reach out and we'll take care of everything.<br>Contact Zaps Now — no commitment required.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="info-text"><strong>Phone</strong><span>+63 917 124 4603</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="info-text"><strong>Email</strong><span>customercare@zapssolutions.ph</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="info-text"><strong>Address</strong><span>20th Floor, Unit 2007, Capital House 9th Ave. Corner Lane BGC Taguig City, Philippines</span></div>
+        </div>
+        <div class="pcap-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="pcap-badge-text">
+            <strong>Member Of</strong>
+            <span>Pest Control Association of the Philippines (PCAP)</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal delay-1">
+        <h3 class="form-title">Send Us a Message</h3>
+        <form id="contact-form" action="https://formsubmit.co/customercare@zapssolutions.ph" method="POST" novalidate>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="Bed Bug Control Inquiry — ZAPS Solutions">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://shinano21.github.io/Web_Zaps/thankyou.html">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="form-row">
+            <div class="form-group" style="margin-bottom:0"><label for="f-name">Name</label><input id="f-name" name="Full Name" type="text" placeholder="Your Full Name" autocomplete="name" required></div>
+            <div class="form-group" style="margin-bottom:0"><label for="f-email">Email</label><input id="f-email" name="Email" type="email" placeholder="your@email.com" autocomplete="email" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group" style="margin-bottom:0"><label for="f-phone">Phone Number</label><input id="f-phone" name="Phone Number" type="tel" placeholder="+63 9XX XXX XXXX" autocomplete="tel" required></div>
+            <div class="form-group" style="margin-bottom:0"><label for="f-address">Address</label><input id="f-address" name="Address" type="text" placeholder="Your Complete Address" autocomplete="street-address" required></div>
+          </div>
+          <div class="form-group">
+            <label for="f-pest">Pest Issue</label>
+            <select id="f-pest" name="Pest Issue" required>
+              <option value="Bed Bugs" selected>Bed Bugs</option>
+              <option>Cockroaches</option><option>Flying Pest</option><option>Rodents</option><option>Termites</option><option>Ants</option><option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="f-message">Message</label><textarea id="f-message" name="Message" placeholder="Describe your bed bug concern, affected areas, property type…" rows="4"></textarea></div>
+          <button class="submit-btn" type="submit">Request a Zapper <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script>
+(function(){
+'use strict';
+document.addEventListener('DOMContentLoaded',function(){fetch('footer.html').then(function(r){return r.text()}).then(function(html){var el=document.getElementById('site-footer');if(el)el.innerHTML=html}).catch(function(){})});
+const bar=document.getElementById('progress-bar');
+function updateProgress(){const s=window.scrollY,d=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(d>0?(s/d)*100:0)+'%'}
+window.addEventListener('scroll',updateProgress,{passive:true});
+function setupNav(){
+const nav=document.getElementById('main-nav'),menuBtn=document.getElementById('menu-btn'),sidebar=document.getElementById('nav-sidebar'),overlay=document.getElementById('nav-overlay'),closeBtn=document.getElementById('sidebar-close');
+window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
+if(menuBtn&&sidebar&&overlay){
+  function openSidebar(){sidebar.classList.add('open');overlay.classList.add('open');menuBtn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';if(closeBtn)closeBtn.focus()}
+  function closeSidebar(){sidebar.classList.remove('open');overlay.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');document.body.style.overflow='';menuBtn.focus()}
+  menuBtn.addEventListener('click',openSidebar);overlay.addEventListener('click',closeSidebar);
+  if(closeBtn)closeBtn.addEventListener('click',closeSidebar);
+  sidebar.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeSidebar)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&sidebar.classList.contains('open'))closeSidebar()});
+}
+}
+function loadNav(){
+  fetch('nav.html')
+    .then(function(r){return r.text()})
+    .then(function(html){
+      var el=document.getElementById('nav-placeholder');
+      if(el){
+        el.outerHTML=html;
+        setupNav();
+        document.querySelectorAll('[data-nav="services"]').forEach(function(a){a.classList.add('active')});
+      }
+    })
+    .catch(function(){});
+}
+loadNav();
+const heroBg=document.getElementById('hero-bg');
+if(heroBg){const img=new Image();img.src='images/bedbugs.jpg';img.onload=function(){heroBg.classList.add('loaded')}}
+const allReveal=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+if('IntersectionObserver' in window){const obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});allReveal.forEach(function(el){obs.observe(el)})}else{allReveal.forEach(function(el){el.classList.add('visible')})}
+})();
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js").then(function(reg) {
+    if (!sessionStorage.getItem("sw-session")) {
+      sessionStorage.setItem("sw-session", "1");
+      var ctrl = navigator.serviceWorker.controller;
+      if (ctrl) ctrl.postMessage("clear");
+    }
+  });
+}
+</script>
+</body>
+</html>

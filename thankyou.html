@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Thank You — ZAPS Solutions Inc.</title>
+    <link rel="icon" href="images/zaps_logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --accent:     #003D7D;
+    --accent-2:   #002d60;
+    --blue-deep:  #0f2d52;
+    --white:      #ffffff;
+    --ink:        #0d1117;
+    --ink-muted:  #4a5568;
+  }
+
+  html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(145deg, #071428 0%, #0b2151 50%, #071e50 100%);
+    color: var(--white);
+    overflow: hidden;
+  }
+
+  /* ── Animated background particles ── */
+  .bg-particles {
+    position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0;
+  }
+  .bg-particles span {
+    position: absolute; border-radius: 50%;
+    background: rgba(0,151,224,0.15);
+    animation: float linear infinite;
+  }
+
+  @keyframes float {
+    0%   { transform: translateY(100vh) scale(0);   opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 0.6; }
+    100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
+  }
+
+  /* ── Layout ── */
+  .page {
+    position: relative; z-index: 1;
+    height: 100vh; height: 100dvh;
+    overflow-y: auto;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: clamp(12px, 3vh, 32px) 20px;
+    text-align: center;
+  }
+
+  /* ── Logo ── */
+  .logo {
+    margin-bottom: clamp(10px, 2.5vh, 40px);
+    animation: slideDown 0.6s cubic-bezier(0.16,1,0.3,1) both;
+    flex-shrink: 0;
+  }
+  .logo img {
+    height: clamp(44px, 7vh, 70px); width: auto;
+    filter: brightness(0) invert(1) drop-shadow(0 4px 16px rgba(0,0,0,0.4));
+  }
+  .logo-text {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: rgba(255,255,255,0.45);
+    margin-top: 6px;
+  }
+
+  /* ── Card ── */
+  .card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: clamp(18px, 3vh, 56px) clamp(20px, 5vw, 56px);
+    max-width: 520px; width: 100%;
+    flex-shrink: 0;
+    animation: slideUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s both;
+  }
+
+  /* ── Checkmark ── */
+  .checkmark-wrap {
+    width: clamp(56px, 8vh, 80px); height: clamp(56px, 8vh, 80px);
+    background: linear-gradient(135deg, #0071BE, #003D7D);
+    border-radius: 50%;
+    margin: 0 auto clamp(12px, 2vh, 28px);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 12px 40px rgba(0,61,125,0.55);
+    animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.4s both;
+  }
+  .checkmark-wrap svg {
+    animation: drawCheck 0.5s ease 0.9s both;
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+  }
+  @keyframes drawCheck {
+    to { stroke-dashoffset: 0; }
+  }
+
+  /* ── Text ── */
+  .tag {
+    display: inline-block;
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; color: #90c4f0;
+    margin-bottom: clamp(6px, 1vh, 12px);
+  }
+  h1 {
+    font-size: clamp(1.25rem, 4vw, 2.2rem);
+    font-weight: 800; line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: clamp(8px, 1.5vh, 14px);
+  }
+  h1 span { color: #0097E0; }
+  p {
+    font-size: 0.88rem; color: rgba(255,255,255,0.65);
+    line-height: 1.6; margin-bottom: clamp(4px, 0.8vh, 10px);
+  }
+  .sub { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-top: 2px; }
+
+  /* ── Divider ── */
+  .divider {
+    width: 48px; height: 2px;
+    background: linear-gradient(90deg, #003D7D, #0097E0);
+    border-radius: 2px; margin: clamp(10px, 1.8vh, 24px) auto;
+  }
+
+  /* ── What happens next ── */
+  .next-steps {
+    display: flex; flex-direction: column; gap: clamp(6px, 1vh, 12px);
+    margin: clamp(10px, 1.5vh, 24px) 0 clamp(12px, 2vh, 32px); text-align: left;
+  }
+  .step {
+    display: flex; align-items: flex-start; gap: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; padding: clamp(8px, 1.2vh, 12px) 14px;
+  }
+  .step-num {
+    width: 26px; height: 26px; flex-shrink: 0;
+    background: rgba(0,61,125,0.5);
+    border: 1px solid rgba(0,113,190,0.4);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; font-weight: 800; color: #90c4f0;
+  }
+  .step-text strong { display: block; font-size: 0.82rem; color: #fff; margin-bottom: 2px; }
+  .step-text span { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+
+  /* ── Buttons ── */
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn-home {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent); color: #fff;
+    padding: 13px 28px; border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem; font-weight: 700;
+    letter-spacing: 0.3px; text-decoration: none;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 6px 24px rgba(0,61,125,0.4);
+  }
+  .btn-home:hover {
+    background: var(--accent-2);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px rgba(0,61,125,0.5);
+  }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.85);
+    padding: 13px 28px; border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem; font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.12); transform: translateY(-2px); }
+
+  /* ── Contact quick-line ── */
+  .contact-line {
+    margin-top: clamp(10px, 1.8vh, 28px);
+    font-size: 0.75rem; color: rgba(255,255,255,0.35);
+  }
+
+  /* Very short screens: hide non-essential content */
+  @media (max-height: 640px) {
+    .next-steps, .contact-line, .logo-text { display: none; }
+    .logo { margin-bottom: 8px; }
+  }
+  .contact-line a { color: #90c4f0; text-decoration: none; }
+  .contact-line a:hover { color: #fff; }
+
+  /* ── Keyframes ── */
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: none; }
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: none; }
+  }
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.5); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; }
+    .bg-particles { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating background particles -->
+<div class="bg-particles" aria-hidden="true" id="particles"></div>
+
+<main class="page">
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="images/zaps_logo.png" alt="ZAPS Solutions Inc." loading="eager">
+    <div class="logo-text">Pest Management Specialists</div>
+  </div>
+
+  <!-- Main card -->
+  <div class="card" role="main">
+
+    <!-- Animated checkmark -->
+    <div class="checkmark-wrap" aria-hidden="true">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+           stroke="#ffffff" stroke-width="2.5"
+           stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+
+    <span class="tag">Inquiry Received</span>
+    <h1>Thank You — We'll <span>ZAPS</span> It!</h1>
+    <p>Your service request has been sent to our team. We'll review your concern and reach out shortly.</p>
+    <p class="sub">Expect a call or email within 24 hours on business days.</p>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- What happens next -->
+    <div class="next-steps" aria-label="What happens next">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>Confirmation Email</strong>
+          <span>You'll receive a copy of your inquiry in your inbox.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <strong>Team Review</strong>
+          <span>Our specialists review your pest concern and location.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <strong>Free On-Site Visit</strong>
+          <span>We schedule a convenient visit — no obligation, no charge.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="actions">
+      <a href="index.html" class="btn-home">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Back to Home
+      </a>
+      <a href="general-pest.html" class="btn-ghost">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Our Services
+      </a>
+    </div>
+
+    <p class="contact-line">
+      Need urgent help? Call us at
+      <a href="tel:+639171244603">+63 917 124 4603</a> or email
+      <a href="mailto:customercare@zapssolutions.ph">customercare@zapssolutions.ph</a>
+    </p>
+
+  </div>
+</main>
+
+<script>
+  // Generate floating background particles
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const container = document.getElementById('particles');
+    const count = 18;
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement('span');
+      const size = Math.random() * 6 + 3;
+      dot.style.cssText = [
+        `width:${size}px`, `height:${size}px`,
+        `left:${Math.random() * 100}%`,
+        `animation-duration:${Math.random() * 12 + 8}s`,
+        `animation-delay:${Math.random() * 10}s`,
+        `opacity:${Math.random() * 0.5 + 0.1}`,
+      ].join(';');
+      container.appendChild(dot);
+    }
+  })();
+
+  // Auto-redirect to home after 30 seconds
+  setTimeout(() => { window.location.href = 'index.html'; }, 30000);
+</script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js").then(function(reg) {
+    if (!sessionStorage.getItem("sw-session")) {
+      sessionStorage.setItem("sw-session", "1");
+      var ctrl = navigator.serviceWorker.controller;
+      if (ctrl) ctrl.postMessage("clear");
+    }
+  });
+}
+</script>
+</body>
+</html>

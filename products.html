@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ZAPS Solutions Biocide Products — Pharmcle-powered pest control products including Delta EC, Roach Gel, White Fence, ZAPS Rodenticide, Teme EC, and Teme Tablet.">
+<title>Products – ZAPS Solutions Inc.</title>
+<link rel="icon" href="images/zaps_logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/nav.css">
+<style>
+:root{
+  --white:#ffffff;--off-white:#f8f7f4;--ink:#0d1117;--ink-2:#1c2530;--ink-muted:#4a5568;
+  --accent:#003D7D;--accent-2:#002d60;--accent-light:#0071BE;--blue-deep:#0f2d52;--blue-mid:#1e4a82;
+  --gold:#c9a227;--surface:#f0f4f0;--border:#e2e8e2;--nav-h:92px;
+  --r-sm:8px;--r-md:14px;--r-lg:22px;--r-xl:32px;--max-w:1220px;--ease:cubic-bezier(0.16,1,0.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px);-webkit-text-size-adjust:100%}
+body{font-family:'Poppins',sans-serif;background:var(--off-white);color:var(--ink);overflow-x:hidden;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+#progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--accent-light),var(--accent));z-index:2000;transition:width 0.1s linear}
+@media(max-width:899px){
+  .ilt-colors{display:flex;flex-wrap:nowrap;justify-content:center;gap:clamp(12px,4vw,24px)}
+  .ilt-color-img{width:min(160px,38vw);height:min(160px,38vw)}
+}
+
+/* ── Pharmcle Hero Banner ── */
+.pharmcle-banner{margin-top:var(--nav-h);position:relative;background:linear-gradient(135deg,#eef4fb 0%,#d8e9f8 50%,#c8def5 100%);overflow:hidden;min-height:clamp(420px,55vw,600px);display:flex;align-items:center;padding:clamp(56px,8vw,96px) clamp(16px,4vw,56px)}
+.pharmcle-banner-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;image-rendering:-webkit-optimize-contrast}
+.pharmcle-banner-inner{position:relative;z-index:1;max-width:760px;margin:0}
+.pharmcle-eyebrow{font-size:0.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.pharmcle-logo-wrap{margin-bottom:20px}
+.pharmcle-logo-wrap img{width:100%;max-width:480px;height:auto;display:block;margin-left:0}
+
+/* ── Products Section ── */
+.products-section{padding:clamp(64px,8vw,96px) clamp(16px,4vw,48px);background:var(--off-white)}
+.products-inner{max-width:var(--max-w);margin:0 auto}
+.products-header{margin-bottom:clamp(40px,5vw,60px)}
+.products-eyebrow{display:flex;align-items:center;gap:10px;font-size:0.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.products-eyebrow::before{content:'';width:20px;height:2px;background:var(--accent)}
+.products-title{font-family:'Poppins',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;color:var(--ink);letter-spacing:-1px;line-height:1.15;margin-bottom:14px}
+.products-title .hl{color:var(--accent)}
+.products-lead{font-size:0.97rem;color:var(--ink-muted);line-height:1.75;max-width:none}
+
+/* ── Product Cards Grid ── */
+.products-grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:860px){.products-grid{grid-template-columns:1fr 1fr;gap:28px}}
+.product-card-center{grid-column:1/-1;max-width:50%;margin:0 auto}
+
+.product-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--r-xl);overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,0.04);
+  transition:box-shadow 0.3s var(--ease),transform 0.3s var(--ease);
+  display:flex;flex-direction:column;
+}
+.product-card:hover{box-shadow:0 12px 48px rgba(0,61,125,0.12);transform:translateY(-4px)}
+.product-card-head{
+  background:linear-gradient(135deg,var(--accent) 0%,var(--blue-mid) 100%);
+  padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.product-card-name{font-size:1.05rem;font-weight:800;color:var(--white);letter-spacing:-0.2px}
+.product-card-num{font-size:0.7rem;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.45);text-transform:uppercase;flex-shrink:0}
+.product-card-body{display:grid;grid-template-columns:1fr;flex:1}
+@media(min-width:540px){.product-card-body{grid-template-columns:160px 1fr}}
+.product-img-wrap{
+  background:linear-gradient(135deg,#f0f6ff 0%,#e6f0ff 100%);
+  display:flex;align-items:center;justify-content:center;
+  padding:clamp(16px,4vw,28px) 20px;min-height:160px;
+}
+.product-img-wrap img{max-height:140px;width:auto;max-width:120px;object-fit:contain;filter:drop-shadow(0 6px 20px rgba(0,61,125,0.15))}
+.product-content{padding:clamp(14px,4vw,24px);display:flex;flex-direction:column;justify-content:center}
+.product-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.product-tag{font-size:0.62rem;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:4px 10px;border-radius:20px;background:rgba(0,61,125,0.08);color:var(--accent);border:1px solid rgba(0,61,125,0.15);white-space:nowrap}
+.product-features{list-style:none;display:flex;flex-direction:column;gap:8px}
+.product-features li{position:relative;padding-left:14px;font-size:0.82rem;color:var(--ink-muted);line-height:1.55;text-align:left}
+.product-features li::before{content:'';position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.product-features li strong{color:var(--ink);font-weight:700}
+.product-features li .hi{color:var(--ink);font-weight:700}
+.product-features li .days{color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:539px){
+  .product-card{border-radius:var(--r-lg)}
+  .product-card-head{padding:12px 16px}
+  .product-card-name{font-size:0.95rem}
+  .product-img-wrap{min-height:140px;padding:14px}
+  .product-img-wrap img{max-height:120px;max-width:100px}
+  .product-content{padding:14px 16px}
+  .product-tags{gap:4px;margin-bottom:10px}
+  .product-tag{font-size:0.6rem;padding:3px 9px}
+  .product-features li{font-size:0.8rem;padding-left:13px}
+}
+
+/* ── CTA Band ── */
+.cta-band{
+  background:linear-gradient(135deg,#0d2a5e 0%,#1a4a96 50%,#0d2a5e 100%);
+  position:relative;overflow:hidden;
+  padding:clamp(48px,7vw,80px) clamp(16px,4vw,48px);
+  text-align:center;
+}
+.cta-band::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 60% 50%,rgba(100,180,255,0.12) 0%,transparent 65%);
+}
+.cta-band-content{position:relative;z-index:1;max-width:640px;margin:0 auto}
+.cta-band h2{font-family:'Poppins',sans-serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:var(--white);letter-spacing:-0.5px;margin-bottom:12px}
+.cta-band p{font-size:0.97rem;color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:28px}
+.btn-white{display:inline-flex;align-items:center;gap:9px;background:var(--white);color:var(--accent);padding:14px 34px;border-radius:var(--r-md);font-family:'Poppins',sans-serif;font-size:0.9rem;font-weight:700;transition:background 0.25s,color 0.25s,transform 0.2s,box-shadow 0.25s;box-shadow:0 6px 28px rgba(0,0,0,0.25)}
+.btn-white:hover{background:var(--off-white);transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,0.3)}
+
+/* ── Reveal ── */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.65s var(--ease),transform 0.65s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-32px);transition:opacity 0.65s var(--ease),transform 0.65s var(--ease)}
+.reveal-left.visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(32px);transition:opacity 0.65s var(--ease),transform 0.65s var(--ease)}
+.reveal-right.visible{opacity:1;transform:none}
+.delay-1{transition-delay:0.1s}.delay-2{transition-delay:0.18s}.delay-3{transition-delay:0.26s}
+.delay-4{transition-delay:0.34s}.delay-5{transition-delay:0.42s}.delay-6{transition-delay:0.50s}
+
+/* ── Contact Section ── */
+#contact{position:relative;background:var(--off-white);padding:clamp(48px,7vw,80px) clamp(16px,4vw,48px);overflow:hidden}
+.contact-grid{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr;gap:40px;align-items:start;position:relative;z-index:1}
+@media(min-width:900px){.contact-grid{grid-template-columns:1fr 1.2fr;gap:56px}}
+.contact-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.contact-eyebrow::before{content:'';width:24px;height:2px;background:var(--accent);border-radius:2px}
+.contact-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(--ink);margin-bottom:12px}
+.contact-title .hl{color:var(--accent-light)}
+.contact-lead{font-size:0.9rem;color:var(--ink-muted);line-height:1.7;margin-bottom:36px;max-width:400px}
+.info-cards{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.info-card{display:flex;align-items:flex-start;gap:14px;background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px;transition:background 0.25s,border-color 0.25s}
+.info-card:hover{background:var(--surface);border-color:var(--accent-light)}
+.info-card-icon{width:38px;height:38px;flex-shrink:0;background:var(--white);border:1px solid var(--border);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.info-card-text strong{display:block;font-size:0.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:3px}
+.info-card-text span,.info-card-text a{font-size:0.84rem;color:var(--ink-muted);transition:color 0.2s}
+.info-card-text a:hover{color:var(--ink)}
+.pcap-glass{display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px}
+.pcap-glass svg{color:var(--accent);flex-shrink:0}
+.pcap-glass strong{display:block;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+.pcap-glass span{font-size:0.82rem;color:var(--ink-muted)}
+.contact-form-wrap{background:var(--white);border-radius:var(--r-xl);padding:clamp(20px,4vw,40px);box-shadow:0 8px 40px rgba(0,0,0,0.08);position:relative;z-index:1;width:100%;box-sizing:border-box}
+.form-title{font-size:1.25rem;font-weight:800;color:var(--ink);margin-bottom:22px;letter-spacing:-0.4px}
+.form-row{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:0}
+@media(min-width:480px){.form-row{grid-template-columns:1fr 1fr}}
+.form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.form-group label{font-size:0.7rem;font-weight:700;letter-spacing:0.8px;color:var(--ink-muted);text-transform:uppercase}
+.form-group input,.form-group textarea,.form-group select{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-sm);padding:10px 13px;color:var(--ink);font-family:'Poppins',sans-serif;font-size:0.88rem;outline:none;transition:border-color 0.2s,box-shadow 0.2s,background 0.2s;min-height:44px;-webkit-appearance:none;appearance:none;width:100%}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--ink-muted);opacity:0.45}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(0,61,125,0.1)}
+.form-group input.error,.form-group textarea.error,.form-group select.error{border-color:#e53e3e;box-shadow:0 0 0 3px rgba(229,62,62,0.1)}
+.field-error{font-size:0.7rem;color:#e53e3e;font-weight:600;display:none;margin-top:2px}
+.field-error.show{display:block}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a5568' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:36px;cursor:pointer}
+.submit-btn{width:100%;background:var(--accent);color:#fff;border:none;padding:14px 20px;border-radius:var(--r-md);margin-top:4px;font-family:'Poppins',sans-serif;font-size:0.88rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;cursor:pointer;transition:background 0.25s,transform 0.2s,box-shadow 0.25s;box-shadow:0 6px 24px rgba(0,61,125,0.35);display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px}
+.submit-btn:hover:not(:disabled){background:var(--accent-2);transform:translateY(-2px);box-shadow:0 10px 32px rgba(0,61,125,0.45)}
+.submit-btn:disabled{opacity:0.75;cursor:not-allowed;transform:none}
+.btn-spinner{width:18px;height:18px;border:2px solid rgba(255,255,255,0.35);border-top-color:#fff;border-radius:50%;animation:spin 0.7s linear infinite;display:none;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.submit-btn.loading .btn-spinner{display:block}
+.submit-btn.loading .btn-text{opacity:0.7}
+
+/* ── ILT Section ── */
+.ilt-section{background:var(--white);padding:clamp(64px,8vw,96px) clamp(16px,4vw,48px)}
+.ilt-inner{max-width:var(--max-w);margin:0 auto}
+.ilt-header{margin-bottom:clamp(48px,6vw,72px);text-align:center}
+.ilt-block{border-radius:var(--r-xl);overflow:hidden;margin-bottom:40px}
+.ilt-block:last-child{margin-bottom:0}
+.ilt-block-label{display:inline-flex;align-items:center;gap:8px;font-size:0.68rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);background:rgba(0,61,125,0.07);border:1px solid rgba(0,61,125,0.15);border-radius:20px;padding:5px 14px;margin-bottom:20px}
+.ilt-layout{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:760px){.ilt-layout{grid-template-columns:1fr 1fr}}
+.ilt-img-wrap{background:linear-gradient(135deg,#f0f6ff 0%,#daeaff 100%);display:flex;align-items:center;justify-content:center;padding:clamp(32px,5vw,56px) clamp(20px,4vw,48px);min-height:280px}
+.ilt-img-wrap img{max-height:320px;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 8px 28px rgba(0,61,125,0.18))}
+.ilt-info{padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center;background:var(--white)}
+.ilt-product-name{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:var(--ink);letter-spacing:-0.5px;margin-bottom:8px;line-height:1.15}
+.ilt-specs{display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.ilt-spec{font-size:0.82rem;font-weight:600;color:var(--ink-muted);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:4px 12px}
+.ilt-tagline{font-size:0.88rem;font-weight:600;color:var(--accent);margin-bottom:14px;letter-spacing:0.2px}
+.ilt-features{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.ilt-features li{position:relative;padding-left:18px;font-size:0.87rem;color:var(--ink-muted);line-height:1.6}
+.ilt-features li::before{content:'';position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--accent-light);flex-shrink:0}
+.ilt-features li strong{color:var(--ink);font-weight:700}
+.ilt-highlight{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:700;letter-spacing:1px;color:var(--accent);background:rgba(0,61,125,0.07);border:1px solid rgba(0,61,125,0.2);border-radius:var(--r-sm);padding:8px 14px;margin-bottom:24px}
+.ilt-colors-title{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ink-muted);margin-bottom:12px}
+.ilt-colors{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.ilt-color{display:flex;flex-direction:column;align-items:center;gap:8px}
+.ilt-color-img{width:160px;height:160px;border-radius:50%;overflow:hidden}
+.ilt-color-img img{width:100%;height:100%;object-fit:cover}
+.ilt-color-label{font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink-muted)}
+/* iZap Pro: image right on desktop */
+.izap-pro .ilt-layout{direction:rtl}
+.izap-pro .ilt-layout>*{direction:ltr}
+.izap-pro .ilt-img-wrap{background:linear-gradient(135deg,#eef4fb 0%,#d8e8f8 100%)}
+.ilt-ilt-img-full{padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;align-items:center}
+.ilt-ilt-img-full img{max-width:700px;width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 8px 28px rgba(0,61,125,0.2))}
+
+/* ── Footer ── */
+footer{background:linear-gradient(160deg,#111827 0%,#0d1117 100%);padding:clamp(40px,6vw,64px) clamp(16px,4vw,48px) 24px}
+.footer-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr;gap:40px;text-align:left}
+@media(min-width:640px){.footer-inner{grid-template-columns:1.5fr 1fr 1fr;text-align:left}}
+.footer-logo{height:100px;width:auto;filter:brightness(0) invert(1);margin-bottom:14px;display:block;margin-left:0;margin-right:0}
+@media(min-width:640px){.footer-logo{margin-left:0;margin-right:0}}
+.footer-tagline{font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.6;max-width:280px;margin:0}
+@media(min-width:640px){.footer-tagline{margin:0}}
+.footer-socials{display:flex;gap:8px;margin-top:16px;justify-content:flex-start}
+@media(min-width:640px){.footer-socials{justify-content:flex-start}}
+.footer-social-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);transition:background 0.2s,color 0.2s}
+.footer-social-btn:hover{background:rgba(255,255,255,0.16);color:#fff}
+.footer-col-title{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px;align-items:center}
+@media(min-width:640px){.footer-links{align-items:flex-start}}
+.footer-links a{font-size:0.85rem;color:rgba(255,255,255,0.6);transition:color 0.2s}
+.footer-links a:hover{color:var(--white)}
+.footer-bottom{max-width:var(--max-w);margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.10);display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.footer-copy{font-size:0.78rem;color:rgba(255,255,255,0.4)}
+.footer-pcap{display:flex;align-items:center;gap:6px;font-size:0.7rem;color:rgba(255,255,255,0.4);font-weight:600;letter-spacing:1px}
+.footer-pcap svg{color:#7dc4f8}
+</style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<div id="nav-placeholder"></div>
+
+<!-- ═══ PHARMCLE BANNER ═══ -->
+<div class="pharmcle-banner">
+  <img src="images/about-bg.jpg" alt="" class="pharmcle-banner-img" loading="eager" decoding="sync" fetchpriority="high">
+  <div class="pharmcle-banner-inner">
+    <div class="pharmcle-logo-wrap">
+      <img src="images/Biocides_logo.png" alt="Pharmcle — Korea's Top Biocides Company" loading="eager">
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PRODUCTS SECTION ═══ -->
+<section class="products-section" aria-label="ZAPS Biocide Products">
+  <div class="products-inner">
+    <div class="products-header reveal">
+      <div class="products-eyebrow">Pharmcle-Powered Solutions</div>
+      <h2 class="products-title">ZAPS <span class="hl">Biocide</span> Products</h2>
+      <p class="products-lead">Zaps is a specialized commercial hygiene and pest management brand. As a trusted pest control company, we provide effective and reliable Pharmcle biocide products designed for safe, clean, and healthy environments for homes, businesses, and industry professionals.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- Delta EC -->
+      <div class="product-card">
+        <div class="product-card-head">
+          <span class="product-card-name">Delta EC</span>
+          <span class="product-card-num">01</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-img-wrap">
+            <img src="images/Delta EC.png" alt="Delta EC" loading="eager">
+          </div>
+          <div class="product-content">
+            <div class="product-tags">
+              <span class="product-tag">Mosquitoes</span>
+              <span class="product-tag">Flies</span>
+              <span class="product-tag">Cockroaches</span>
+            </div>
+            <ul class="product-features">
+              <li><strong>Multi Insect Killer</strong> — targets mosquitoes, flies, and cockroaches</li>
+              <li>Residual Effect: <span class="days">Cockroaches 15 Days</span> &amp; <span class="days">Flies 30 Days</span></li>
+              <li>Fast Knock Down</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Roach Gel -->
+      <div class="product-card">
+        <div class="product-card-head">
+          <span class="product-card-name">Roach Gel</span>
+          <span class="product-card-num">02</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-img-wrap">
+            <img src="images/Roach Gel.png" alt="Roach Gel" loading="eager">
+          </div>
+          <div class="product-content">
+            <div class="product-tags">
+              <span class="product-tag">Cockroaches</span>
+            </div>
+            <ul class="product-features">
+              <li>Cockroaches typically die within <span class="days">1 to 3 Days</span> after consuming the bait</li>
+              <li>Other roaches may eat the dead ones or their droppings — spreading the poison to more roaches</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- White Fence -->
+      <div class="product-card">
+        <div class="product-card-head">
+          <span class="product-card-name">White Fence</span>
+          <span class="product-card-num">03</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-img-wrap">
+            <img src="images/White Fence.png" alt="White Fence" loading="eager">
+          </div>
+          <div class="product-content">
+            <div class="product-tags">
+              <span class="product-tag">Cockroaches</span>
+            </div>
+            <ul class="product-features">
+              <li>Foam mixture that traps cockroaches causing them to die immediately</li>
+              <li>Residual Effect: <span class="days">Cockroaches 15 Days</span></li>
+              <li>Fast Knock Down</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZAPS Rodenticide -->
+      <div class="product-card">
+        <div class="product-card-head">
+          <span class="product-card-name">ZAPS Rodenticide</span>
+          <span class="product-card-num">04</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-img-wrap">
+            <img src="images/ZAPS Rodenticide.png" alt="ZAPS Rodenticide" loading="eager">
+          </div>
+          <div class="product-content">
+            <div class="product-tags">
+              <span class="product-tag">Rats</span>
+              <span class="product-tag">Mice</span>
+              <span class="product-tag">Rodents</span>
+            </div>
+            <ul class="product-features">
+              <li>Prevents blood from clotting — <span class="hi">Causing Internal Bleeding</span></li>
+              <li>Rodents die within <span class="days">3 to 7 Days</span> after consuming</li>
+              <li>Symptoms: weakness, bleeding from gums or nose, lethargy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teme EC -->
+      <div class="product-card">
+        <div class="product-card-head">
+          <span class="product-card-name">Teme EC</span>
+          <span class="product-card-num">05</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-img-wrap">
+            <img src="images/Teme EC.png" alt="Teme EC" loading="eager">
+          </div>
+          <div class="product-content">
+            <div class="product-tags">
+              <span class="product-tag">Mosquitoes</span>
+              <span class="product-tag">Larvae</span>
+            </div>
+            <ul class="product-features">
+              <li>Fast Knock Down</li>
+              <li>For stagnant water</li>
+              <li>Targets mosquito larvae</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teme Tablet -->
+      <div class="product-card">
+        <div class="product-card-head">
+          <span class="product-card-name">Teme Tablet</span>
+          <span class="product-card-num">06</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-img-wrap">
+            <img src="images/Teme Tablet.png" alt="Teme Tablet" loading="eager">
+          </div>
+          <div class="product-content">
+            <div class="product-tags">
+              <span class="product-tag">Mosquitoes</span>
+              <span class="product-tag">Larvae</span>
+              <span class="product-tag">Sewage</span>
+            </div>
+            <ul class="product-features">
+              <li>Effective for treating up to <strong>1 ton of water</strong></li>
+              <li>For sewer and septic tank</li>
+              <li>Targets mosquito larvae</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZAPS Ant Granule (Blister) -->
+      <div class="product-card">
+        <div class="product-card-head">
+          <span class="product-card-name">ZAPS Ant Granule (Blister)</span>
+          <span class="product-card-num">07</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-img-wrap">
+            <img src="images/ANTS Granule Blister.png" alt="ZAPS Ant Granule Blister" loading="lazy">
+          </div>
+          <div class="product-content">
+            <div class="product-tags">
+              <span class="product-tag">Ants</span>
+              <span class="product-tag">Granule</span>
+            </div>
+            <ul class="product-features">
+              <li>Highly palatable bait for effective ant control</li>
+              <li>Helps eliminate ants at the source</li>
+              <li>Easy-to-use granule formulation for long-lasting protection</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZAPS Ant Granule (Bottle) -->
+      <div class="product-card">
+        <div class="product-card-head">
+          <span class="product-card-name">ZAPS Ant Granule (Bottle)</span>
+          <span class="product-card-num">08</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-img-wrap">
+            <img src="images/ANTS Granule Bottle.png" alt="ZAPS Ant Granule Bottle" loading="lazy">
+          </div>
+          <div class="product-content">
+            <div class="product-tags">
+              <span class="product-tag">Ants</span>
+              <span class="product-tag">Granule</span>
+            </div>
+            <ul class="product-features">
+              <li>Highly palatable bait for effective ant control</li>
+              <li>Helps eliminate ants at the source</li>
+              <li>Easy-to-use granule formulation for long-lasting protection</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZAPS Aqua Guard -->
+      <div class="product-card product-card-center">
+        <div class="product-card-head">
+          <span class="product-card-name">ZAPS Aqua Guard</span>
+          <span class="product-card-num">09</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-img-wrap">
+            <img src="images/Aqua Guard.png" alt="ZAPS Aqua Guard" loading="lazy">
+          </div>
+          <div class="product-content">
+            <div class="product-tags">
+              <span class="product-tag">Mosquitoes</span>
+              <span class="product-tag">Repellent</span>
+            </div>
+            <ul class="product-features">
+              <li>Effective mosquito repellent that helps protect against mosquito bites</li>
+              <li>Hypoallergenic formula, gentle on sensitive skin</li>
+              <li>Safe and suitable for all ages</li>
+              <li>Ideal for everyday indoor and outdoor use</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INSECT LIGHT TRAPS SECTION ═══ -->
+<section class="ilt-section" aria-label="ZAPS Insect Light Traps">
+  <div class="ilt-inner">
+
+    <div class="ilt-header reveal">
+      <div class="products-eyebrow" style="justify-content:center">ZAPS Devices</div>
+      <h2 class="products-title">Insect <span class="hl">Light Traps</span></h2>
+      <p class="products-lead" style="margin:0 auto;text-align:center;max-width:none">Advanced UV-powered devices for continuous, chemical-free flying insect control. <br>Built for outdoor and indoor environments.</p>
+    </div>
+
+    <!-- iZap Pro -->
+    <div class="ilt-block izap-pro reveal">
+      <div class="ilt-block-label">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        Insect Light Trap — Outdoor
+      </div>
+      <div class="ilt-ilt-img-full">
+        <h3 class="ilt-product-name" style="text-align:center;margin-bottom:24px;font-size:clamp(2.4rem,6vw,3.8rem)">i<span style="color:var(--accent)">ZAP</span> Pro</h3>
+        <img src="images/IZap Pro.png" alt="iZap Pro Outdoor Insect Light Trap" loading="eager">
+      </div>
+    </div>
+
+    <!-- ZAPS ILT -->
+    <div class="ilt-block zaps-ilt reveal">
+      <div class="ilt-block-label">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+        Insect Light Trap — Indoor
+      </div>
+      <div class="ilt-layout">
+        <div class="ilt-img-wrap">
+          <img src="images/zapsILT.png" alt="ZAPS ILT Indoor Insect Light Trap" loading="eager">
+        </div>
+        <div class="ilt-info">
+          <h3 class="ilt-product-name" style="font-size:clamp(2.4rem,6vw,3.8rem)"><span style="color:var(--accent)">ZAPS</span> ILT</h3>
+          <p class="ilt-tagline">Eco-friendly insect control device</p>
+          <ul class="ilt-features">
+            <li>Traps flies, mosquitoes, moths, and other insects</li>
+            <li>Ideal for restaurants, kitchens, hotels, and offices</li>
+            <li>Quiet, safe, and easy to maintain</li>
+          </ul>
+          <div class="ilt-highlight">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+            Uses UV light and adhesive board
+          </div>
+          <p class="ilt-colors-title">Two Colors: Black &amp; White</p>
+          <div class="ilt-colors">
+            <div class="ilt-color">
+              <div class="ilt-color-img"><img src="images/Black.png" alt="ZAPS ILT — Black" loading="lazy"></div>
+              <span class="ilt-color-label">Black</span>
+            </div>
+            <div class="ilt-color">
+              <div class="ilt-color-img"><img src="images/white.png" alt="ZAPS ILT — White" loading="lazy"></div>
+              <span class="ilt-color-label">White</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" aria-label="Contact Us">
+  <div class="contact-header reveal" style="text-align:center;margin-bottom:40px;">
+    <p class="contact-eyebrow" style="justify-content:center;">Get In Touch</p>
+    <h2 class="contact-title">Let Our Zappers<br><span class="hl">Solve Your Problems</span></h2>
+    <p class="contact-lead" style="max-width:none;margin:0 auto 0;">Reach out and we'll take care of everything.<br>Contact Zaps Now — no commitment required.</p>
+  </div>
+  <div class="contact-grid">
+
+    <div class="contact-info-side">
+
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="info-card-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="info-card-text">
+            <strong>Phone</strong>
+            <span><a href="tel:+639171244603">+63 917 124 4603</a></span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="info-card-text">
+            <strong>Email</strong>
+            <span><a href="mailto:customercare@zapssolutions.ph">customercare@zapssolutions.ph</a></span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="info-card-text">
+            <strong>Website</strong>
+            <span><a href="https://www.zapssolutions.ph" target="_blank" rel="noopener">www.zapssolutions.ph</a></span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="info-card-text">
+            <strong>Address</strong>
+            <span>20th Floor, Unit 2007, Capital House, 9th Ave. Corner Lane BGC, Taguig City</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </div>
+          <div class="info-card-text">
+            <strong>Facebook</strong>
+            <span><a href="https://web.facebook.com/ZAPSSolutionsInc/?_rdc=1&_rdr#" target="_blank" rel="noopener">ZAPS Solutions Pest Management</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pcap-glass">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div>
+          <strong>Certified Member</strong>
+          <span>Pest Control Association of the Philippines (PCAP)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <h3 class="form-title">Request a Zapper</h3>
+      <form id="contact-form" action="https://formsubmit.co/customercare@zapssolutions.ph" method="POST" novalidate>
+        <input type="hidden" name="_captcha"  value="false">
+        <input type="hidden" name="_subject"  value="New Pest Control Inquiry — ZAPS Solutions">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next"     value="https://shinano21.github.io/Web_Zaps/thankyou.html">
+        <input type="text"   name="_honey"    style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-row" style="margin-bottom:14px">
+          <div class="form-group" style="margin-bottom:0">
+            <label for="f-name">Full Name <span aria-hidden="true" style="color:#e53e3e">*</span></label>
+            <input id="f-name" name="Full Name" type="text" placeholder="Juan dela Cruz" autocomplete="name" required>
+            <span class="field-error" id="err-name">Please enter your full name.</span>
+          </div>
+          <div class="form-group" style="margin-bottom:0">
+            <label for="f-email">Email <span aria-hidden="true" style="color:#e53e3e">*</span></label>
+            <input id="f-email" name="Email" type="email" placeholder="juan@email.com" autocomplete="email" required>
+            <span class="field-error" id="err-email">Please enter a valid email.</span>
+          </div>
+        </div>
+
+        <div class="form-row" style="margin-bottom:14px">
+          <div class="form-group" style="margin-bottom:0">
+            <label for="f-phone">Phone Number <span aria-hidden="true" style="color:#e53e3e">*</span></label>
+            <input id="f-phone" name="Phone Number" type="tel" placeholder="+63 9XX XXX XXXX" autocomplete="tel" required>
+            <span class="field-error" id="err-phone">Please enter your phone number.</span>
+          </div>
+          <div class="form-group" style="margin-bottom:0">
+            <label for="f-pest">Pest Issue <span aria-hidden="true" style="color:#e53e3e">*</span></label>
+            <select id="f-pest" name="Pest Issue" required>
+              <option value="">Select pest type…</option>
+              <option>Cockroaches</option>
+              <option>Termites</option>
+              <option>Rats</option>
+              <option>Mosquitoes</option>
+              <option>Bed Bugs</option>
+              <option>Ants</option>
+              <option>Other</option>
+            </select>
+            <span class="field-error" id="err-pest">Please select a pest issue.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="f-address">Address <span aria-hidden="true" style="color:#e53e3e">*</span></label>
+          <input id="f-address" name="Address" type="text" placeholder="Complete address for visit" autocomplete="street-address" required>
+          <span class="field-error" id="err-address">Please enter your address.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="Message" placeholder="Describe your pest concern, frequency, affected areas…" rows="4"></textarea>
+        </div>
+
+        <button class="submit-btn" type="submit" id="submit-btn">
+          <span class="btn-text">Contact Zaps Now</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+          <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script>
+(function(){
+'use strict';
+document.addEventListener('DOMContentLoaded',function(){fetch('footer.html').then(function(r){return r.text()}).then(function(html){var el=document.getElementById('site-footer');if(el)el.innerHTML=html}).catch(function(){})});
+const bar=document.getElementById('progress-bar');
+function updateProgress(){const s=window.scrollY,d=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(d>0?(s/d)*100:0)+'%'}
+window.addEventListener('scroll',updateProgress,{passive:true});
+function setupNav(){
+var nav=document.getElementById('main-nav'),menuBtn=document.getElementById('menu-btn'),sidebar=document.getElementById('nav-sidebar'),overlay=document.getElementById('nav-overlay'),closeBtn=document.getElementById('sidebar-close');
+window.addEventListener('scroll',function(){if(nav)nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
+if(menuBtn&&sidebar&&overlay){
+  function openSidebar(){sidebar.classList.add('open');overlay.classList.add('open');menuBtn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';if(closeBtn)closeBtn.focus()}
+  function closeSidebar(){sidebar.classList.remove('open');overlay.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');document.body.style.overflow='';menuBtn.focus()}
+  menuBtn.addEventListener('click',openSidebar);overlay.addEventListener('click',closeSidebar);
+  if(closeBtn)closeBtn.addEventListener('click',closeSidebar);
+  sidebar.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeSidebar)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&sidebar.classList.contains('open'))closeSidebar()});
+}
+}
+function loadNav(){
+  fetch('nav.html')
+    .then(function(r){return r.text()})
+    .then(function(html){
+      var el=document.getElementById('nav-placeholder');
+      if(el){
+        el.outerHTML=html;
+        setupNav();
+        document.querySelectorAll('[data-nav="product"]').forEach(function(a){a.classList.add('active')});
+      }
+    })
+    .catch(function(){});
+}
+loadNav();
+const allReveal=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+if('IntersectionObserver' in window){const obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});allReveal.forEach(function(el){obs.observe(el)})}else{allReveal.forEach(function(el){el.classList.add('visible')})}
+// ── Contact form ──
+var form=document.getElementById('contact-form');
+if(form){
+  var btn=document.getElementById('submit-btn');
+  var fields={
+    name:{el:document.getElementById('f-name'),err:document.getElementById('err-name'),validate:function(v){return v.trim().length>=2}},
+    email:{el:document.getElementById('f-email'),err:document.getElementById('err-email'),validate:function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())}},
+    phone:{el:document.getElementById('f-phone'),err:document.getElementById('err-phone'),validate:function(v){return v.trim().length>=7}},
+    pest:{el:document.getElementById('f-pest'),err:document.getElementById('err-pest'),validate:function(v){return v!==''}},
+    address:{el:document.getElementById('f-address'),err:document.getElementById('err-address'),validate:function(v){return v.trim().length>=5}}
+  };
+  Object.values(fields).forEach(function(f){
+    f.el.addEventListener('input',function(){f.el.classList.remove('error');f.err.classList.remove('show')});
+    f.el.addEventListener('change',function(){f.el.classList.remove('error');f.err.classList.remove('show')});
+  });
+  form.addEventListener('submit',function(e){
+    var valid=true;
+    Object.values(fields).forEach(function(f){
+      if(!f.validate(f.el.value)){f.el.classList.add('error');f.err.classList.add('show');valid=false}
+      else{f.el.classList.remove('error');f.err.classList.remove('show')}
+    });
+    if(!valid){e.preventDefault();var firstErr=form.querySelector('.error');if(firstErr)firstErr.scrollIntoView({behavior:'smooth',block:'center'});return}
+    btn.disabled=true;btn.classList.add('loading');btn.querySelector('.btn-text').textContent='Sending…';
+    var icon=btn.querySelector('.btn-icon');if(icon)icon.style.display='none';
+  });
+}
+})();
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js").then(function(reg) {
+    if (!sessionStorage.getItem("sw-session")) {
+      sessionStorage.setItem("sw-session", "1");
+      var ctrl = navigator.serviceWorker.controller;
+      if (ctrl) ctrl.postMessage("clear");
+    }
+  });
+}
+</script>
+</body>
+</html>

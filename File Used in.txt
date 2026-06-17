@@ -1,0 +1,11 @@
+File Used in
+hero-bg.jpg H ero section (full screen)
+pharmcle-bg.jpgPharmcle / Korea product section
+about-bg.jpg About section
+about-main.jpg About left card (big image)
+about-team.jpg About left card (small image)
+iptmf-bg.jpg IPTMF Cycle 
+sectionservices-bg.jpg Services section
+team-bg.jpg Team 
+sectionclients-bg.jpg Clients/Reviews 
+sectioncontact-bg.jpg Contact section
